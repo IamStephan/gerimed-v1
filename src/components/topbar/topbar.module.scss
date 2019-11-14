@@ -1,0 +1,61 @@
+@import '../../utils/globals.scss';
+
+$topbarHeight: 145;
+$breakpointOne: 1100;
+$breakpointTwo: 450;
+
+.topbar {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        max-width: 500px;
+        width: 100%;
+        height: #{$topbarHeight}px;
+        position: relative;
+
+        .img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .navigationDesktop {
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .navigationMobile {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: #{$breakpointOne}px){
+    .topbar{
+        flex-direction: column;
+        align-items: center;
+
+        .navigationDesktop {
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: #{$breakpointTwo}px) {
+    .topbar {
+        padding: 25px;
+    }
+}
+
+:export {
+    topbarHeight: $topbarHeight;
+    breakpointOne: $breakpointOne;
+    breakpointTwo: $breakpointTwo;
+}
