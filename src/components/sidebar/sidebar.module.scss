@@ -33,7 +33,26 @@ $menuWidth: 75vw;
         width: $menuWidth;
         height: 100%;
         background-color: white;
+        padding: #{$padding * 2}px;
         transition: right #{$animationLength}ms ease-in-out;
+
+        .header {
+            position: relative;
+            height: 150px;
+
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+        }
 
         &.open {
             right: 0;
