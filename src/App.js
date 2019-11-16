@@ -8,6 +8,7 @@ import globals from './utils/globals.scss'
 
 import ScrollToTop from './components/scrollToTop/scrollToTop'
 import Topbar from './components/topbar/topbar'
+import Footer from './components/footer/footer';
 
 import AppStore from './stores/appStore'
 
@@ -48,6 +49,7 @@ export default class Global extends Component {
               <Switch>
                 <Route />
               </Switch>
+              <Footer />
             </Router>
           </ThemeProvider>
         </StoreProvider>

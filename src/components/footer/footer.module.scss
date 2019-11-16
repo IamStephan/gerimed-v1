@@ -1,0 +1,30 @@
+@import '../../utils/globals.scss';
+
+.footer {
+    background-color: $dark;
+    color: white;
+    padding: #{$padding * 2}px;
+    padding-top: #{$padding * 4}px;
+
+    .places {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: #{$padding}px;
+
+        .section {
+            margin-left: #{$padding * 2}px;
+            margin-right: #{$padding * 2}px;
+            margin-bottom: #{$padding * 4}px;
+        }
+    }
+
+    .more-info {
+        padding: #{$padding}px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+}
