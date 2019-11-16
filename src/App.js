@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Provider as StoreProvider } from 'mobx-react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
 import globals from './utils/globals.scss'
 
@@ -11,6 +12,11 @@ import Topbar from './components/topbar/topbar'
 import Footer from './components/footer/footer';
 
 import AppStore from './stores/appStore'
+
+const Construction = Loadable({
+  loader: () => import('./pages/construction/construction'),
+  loading: () => <div>loading...</div>
+})
 
 const stores = {
   AppStore
@@ -47,7 +53,7 @@ export default class Global extends Component {
               <ScrollToTop />
               <Topbar />
               <Switch>
-                <Route />
+                <Route component={Construction} />
               </Switch>
               <Footer />
             </Router>
