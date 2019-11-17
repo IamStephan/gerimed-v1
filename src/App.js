@@ -19,6 +19,11 @@ const Construction = Loadable({
   loading: Loader
 })
 
+const Services = Loadable({
+  loader: () => import('./pages/services/services'),
+  loading: Loader
+})
+
 const stores = {
   AppStore
 }
@@ -54,6 +59,7 @@ export default class Global extends Component {
               <ScrollToTop />
               <Topbar />
               <Switch>
+                <Route component={Services} exact path='/services' />
                 <Route component={Construction} />
               </Switch>
               <Footer />

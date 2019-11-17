@@ -1,0 +1,43 @@
+@import '../../utils/globals.scss';
+
+$breakpointOne: 560;
+
+.services {
+    max-width: 980px;
+    margin: auto;
+
+    .card {
+        display: flex;
+        margin: #{$margin * 2}px;
+        margin-bottom: #{$margin * 4}px;
+        position: relative;
+
+        .img {
+            flex: 1;
+            position: relative;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            flex: 2;
+        }
+    }
+}
+
+@media screen and (max-width: #{$breakpointOne}px) {
+    .services{
+        .card{
+            flex-direction: column;
+
+            .img {
+                min-height: 300px;
+            }
+        }
+    }
+}
