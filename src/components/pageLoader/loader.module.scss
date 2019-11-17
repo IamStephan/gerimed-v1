@@ -5,9 +5,10 @@ $loaderBorder: 7;
 $animDur: 500;
 
 .loader {
-    width: 100vw;
     height: 100vh;
     position: relative;
+    left: 0px;
+    top: 0px;
 
     &:before {
         content: '';
