@@ -54,8 +54,8 @@ export default class Services extends Component {
   render() {
     return (
       <div className={`${styles['services']}`}>
-        <h1 style={{textAlign: 'center'}}>Services Overview</h1>
-        <Card className={`${styles['card']}`}>
+        <h1 className={`${styles['title']}`}>Services Overview</h1>
+        <Card elevation='7' className={`${styles['card']}`}>
           <div className={`${styles['img']}`}>
             <img alt='Frail care' src={require('../../static/pexels-photo-302083.jpeg')} />
           </div>
@@ -119,7 +119,7 @@ export default class Services extends Component {
           </CardContent>
         </Card>
 
-        <Card className={`${styles['card']}`}>
+        <Card elevation='7' className={`${styles['card']}`}>
           <div className={`${styles['img']}`}>
             <img alt='Sub-acute Care / Step Down' src={require('../../static/pexels-photo-339620.jpeg')} />
           </div>
@@ -162,7 +162,7 @@ export default class Services extends Component {
           </CardContent>
         </Card>
 
-        <Card className={`${styles['card']}`}>
+        <Card elevation='7' className={`${styles['card']}`}>
           <div className={`${styles['img']}`}>
             <img alt='Assisted Living Apartments' src={require('../../static/old-people-couple-together-connected.jpg')} />
           </div>

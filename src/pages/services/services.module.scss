@@ -5,6 +5,12 @@ $breakpointOne: 560;
 .services {
     max-width: 980px;
     margin: auto;
+    padding: #{$padding * 2}px;
+
+    .title {
+        padding-bottom: 25px;
+        text-align: center;
+    }
 
     .card {
         display: flex;
