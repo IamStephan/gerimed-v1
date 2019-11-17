@@ -21,10 +21,10 @@
 
     .more-info {
         padding: #{$padding}px;
+        padding-top: #{$padding * 2}px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 50px;
     }
 }

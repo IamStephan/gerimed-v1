@@ -10,12 +10,13 @@ import globals from './utils/globals.scss'
 import ScrollToTop from './components/scrollToTop/scrollToTop'
 import Topbar from './components/topbar/topbar'
 import Footer from './components/footer/footer';
+import Loader from './components/pageLoader/loader'
 
 import AppStore from './stores/appStore'
 
 const Construction = Loadable({
   loader: () => import('./pages/construction/construction'),
-  loading: () => <div>loading...</div>
+  loading: Loader
 })
 
 const stores = {

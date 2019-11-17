@@ -1,0 +1,35 @@
+@import '../../utils/globals.scss';
+
+$loaderSize: 50;
+$loaderBorder: 7;
+$animDur: 500;
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: #{$loaderSize}px;
+        height: #{$loaderSize}px;
+        position: absolute;
+        left: calc(50% - #{$loaderSize / 2}px);
+        top: calc(50% - #{$loaderSize / 2}px);
+        border: solid #{$loaderBorder}px $primary;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: loader #{$animDur}ms ease-in-out infinite;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
