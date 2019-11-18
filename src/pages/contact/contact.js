@@ -1,32 +1,45 @@
 import React, { Component } from 'react';
 
 import styles from './contact.module.scss';
-import { Card, CardContent, TextField, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import ContactModal from '../../components/contactModal/contactModal';
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      dialog: {
+        isOpen: false
+      }
+    }
+
+    this.closeDialog = this.closeDialog.bind(this)
+    this.openDialog = this.openDialog.bind(this)
+  }
+
+  closeDialog() {
+    this.setState({
+      ...this.state,
+      dialog: {
+        isOpen: false
+      }
+    })
+  }
+
+  openDialog() {
+    this.setState({
+      ...this.state,
+      dialog: {
+        isOpen: true
+      }
+    })
+  }
+
   render() {
     return (
       <div className={`${styles['contact']}`}>
         <h1 className={`${styles['title']}`}>Contact Us</h1>
-
-        <Card elevation='7' className={`${styles['form']}`}>
-          <CardContent>
-            <h2>Contact Form</h2>
-          </CardContent>
-          <CardContent className={`${styles['fields']}`}>
-            <h3>Full Name</h3>
-            <TextField variant='outlined' color='primary' className={`${styles['input']}`} />
-            <br />
-            <h3>Email</h3>
-            <TextField variant='outlined' color='primary' className={`${styles['input']}`} />
-            <br />
-            <h3>Message</h3>
-            <TextField variant='outlined' color='primary' className={`${styles['input']}`} multiline rows='5' />
-          </CardContent>
-          <CardContent>
-            <Button variant='contained' color='primary'>Submit</Button>
-          </CardContent>
-        </Card>
 
         <section className={`${styles['locations']}`}>
           <div className={`${styles['location']}`}>
@@ -65,6 +78,12 @@ export default class Contact extends Component {
             </div>
           </div>
         </section>
+
+        <div>
+          <Button fullWidth variant='contained' color='primary' onClick={this.openDialog}>Send us a message</Button>
+        </div>
+
+        <ContactModal open={this.state.dialog.isOpen} onClose={this.closeDialog} />
       </div>
     );
   }

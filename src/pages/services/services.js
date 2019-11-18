@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardContent, Collapse, Button } from '@material-ui/core';
 
 import styles from './services.module.scss'
+import ContactModal from '../../components/contactModal/contactModal';
 
 export default class Services extends Component {
   constructor(props) {
@@ -16,15 +17,20 @@ export default class Services extends Component {
       },
       assistLive: {
         isOpen: false
+      },
+      dialog: {
+        isOpen: false
       }
     }
 
-    this.ToggleFrailCare = this.ToggleFrailCare.bind(this)
-    this.ToggleSubCare = this.ToggleSubCare.bind(this)
-    this.ToggleAssistLive = this.ToggleAssistLive.bind(this)
+    this.toggleFrailCare = this.toggleFrailCare.bind(this)
+    this.toggleSubCare = this.toggleSubCare.bind(this)
+    this.toggleAssistLive = this.toggleAssistLive.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+    this.openModal = this.openModal.bind(this)
   }
 
-  ToggleFrailCare() {
+  toggleFrailCare() {
     this.setState((prevState) => ({
       ...prevState,
       frailCare: {
@@ -33,7 +39,7 @@ export default class Services extends Component {
     }))
   }
 
-  ToggleSubCare() {
+  toggleSubCare() {
     this.setState((prevState) => ({
       ...prevState,
       subCare: {
@@ -42,13 +48,31 @@ export default class Services extends Component {
     }))
   }
 
-  ToggleAssistLive() {
+  toggleAssistLive() {
     this.setState((prevState) => ({
       ...prevState,
       assistLive: {
         isOpen: !prevState.assistLive.isOpen
       }
     }))
+  }
+
+  closeModal() {
+    this.setState({
+      ...this.state,
+      dialog: {
+        isOpen: false
+      }
+    })
+  }
+
+  openModal() {
+    this.setState({
+      ...this.state,
+      dialog: {
+        isOpen: true
+      }
+    })
   }
 
   render() {
@@ -68,8 +92,8 @@ export default class Services extends Component {
               or mental incapacity.
             </p>
             <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10}}>
-              <Button variant='outlined' color='primary'>Contact</Button>
-              <Button variant='contained' color='primary' onClick={this.ToggleFrailCare}>Learn More</Button>
+              <Button variant='outlined' color='primary' onClick={this.openModal}>Contact</Button>
+              <Button variant='contained' color='primary' onClick={this.toggleFrailCare}>Learn More</Button>
             </div>
             
             <Collapse in={this.state.frailCare.isOpen}>
@@ -130,8 +154,8 @@ export default class Services extends Component {
               Sub-acute care is relatively new and rapidly growing medical service.  It merges the sophisticated technology of a hospital and the efficiency of a skilled nursing facility to reduce the cost of services while maintaining quality of care.
             </p>
             <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10}}>
-              <Button variant='outlined' color='primary'>Contact</Button>
-              <Button variant='contained' color='primary' onClick={this.ToggleSubCare}>Learn More</Button>
+              <Button variant='outlined' color='primary' onClick={this.openModal}>Contact</Button>
+              <Button variant='contained' color='primary' onClick={this.toggleSubCare}>Learn More</Button>
             </div>
             
             <Collapse in={this.state.subCare.isOpen}>
@@ -173,8 +197,8 @@ export default class Services extends Component {
               These apartments are ideal if you want your freedom but still need some extra care when needed.
             </p>
             <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10}}>
-              <Button variant='outlined' color='primary'>Contact</Button>
-              <Button variant='contained' color='primary' onClick={this.ToggleAssistLive}>Learn More</Button>
+              <Button variant='outlined' color='primary' onClick={this.openModal}>Contact</Button>
+              <Button variant='contained' color='primary' onClick={this.toggleAssistLive}>Learn More</Button>
             </div>
             
             <Collapse in={this.state.assistLive.isOpen}>
@@ -194,6 +218,8 @@ export default class Services extends Component {
             </Collapse>
           </CardContent>
         </Card>
+
+        <ContactModal open={this.state.dialog.isOpen} onClose={this.closeModal} />
       </div>
     );
   }
