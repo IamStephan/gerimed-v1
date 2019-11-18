@@ -1,0 +1,16 @@
+@import '../../utils/globals.scss';
+
+.callout {
+    display: flex;
+    background-color: rgba($primary, 0.15);
+    border-left: solid 3px $primary;
+
+    .icon{
+        padding: #{$padding}px;
+    }
+
+    .content {
+        flex: 1;
+        padding: #{$padding}px;
+    }
+}

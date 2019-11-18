@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import styles from './contact.module.scss';
 import { Button } from '@material-ui/core';
+
 import ContactModal from '../../components/contactModal/contactModal';
+import Callout from '../../components/callout/callout'
 
 export default class Contact extends Component {
   constructor(props) {
@@ -41,6 +43,12 @@ export default class Contact extends Component {
       <div className={`${styles['contact']}`}>
         <h1 className={`${styles['title']}`}>Contact Us</h1>
 
+        <Callout style={{marginBottom: 25}}>
+          <h2>General inquiries</h2>
+          <p style={{marginBottom: 10}}>You can use can contact us directly by filling in the form and we will respond as soon as possible.</p>
+          <Button onClick={this.openDialog} variant='contained' color='primary'>Inquiry Form</Button>
+        </Callout>
+
         <section className={`${styles['locations']}`}>
           <div className={`${styles['location']}`}>
             <div className={`${styles['map']}`}>
@@ -78,11 +86,6 @@ export default class Contact extends Component {
             </div>
           </div>
         </section>
-
-        <div>
-          <Button fullWidth variant='contained' color='primary' onClick={this.openDialog}>Send us a message</Button>
-        </div>
-
         <ContactModal open={this.state.dialog.isOpen} onClose={this.closeDialog} />
       </div>
     );

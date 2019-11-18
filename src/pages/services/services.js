@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Card, CardContent, Collapse, Button } from '@material-ui/core';
 
 import styles from './services.module.scss'
-import ContactModal from '../../components/contactModal/contactModal';
 
 export default class Services extends Component {
   constructor(props) {
@@ -17,17 +16,12 @@ export default class Services extends Component {
       },
       assistLive: {
         isOpen: false
-      },
-      dialog: {
-        isOpen: false
       }
     }
 
     this.toggleFrailCare = this.toggleFrailCare.bind(this)
     this.toggleSubCare = this.toggleSubCare.bind(this)
     this.toggleAssistLive = this.toggleAssistLive.bind(this)
-    this.closeModal = this.closeModal.bind(this)
-    this.openModal = this.openModal.bind(this)
   }
 
   toggleFrailCare() {
@@ -57,29 +51,11 @@ export default class Services extends Component {
     }))
   }
 
-  closeModal() {
-    this.setState({
-      ...this.state,
-      dialog: {
-        isOpen: false
-      }
-    })
-  }
-
-  openModal() {
-    this.setState({
-      ...this.state,
-      dialog: {
-        isOpen: true
-      }
-    })
-  }
-
   render() {
     return (
       <div className={`${styles['services']}`}>
         <h1 className={`${styles['title']}`}>Services Overview</h1>
-        <Card elevation='7' className={`${styles['card']}`}>
+        <Card elevation='4' className={`${styles['card']}`}>
           <div className={`${styles['img']}`}>
             <img alt='Frail care' src={require('../../static/pexels-photo-302083.jpeg')} />
           </div>
@@ -91,8 +67,7 @@ export default class Services extends Component {
               able to look after yourself because of physical frailty
               or mental incapacity.
             </p>
-            <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10}}>
-              <Button variant='outlined' color='primary' onClick={this.openModal}>Contact</Button>
+            <div style={{display: 'flex', justifyContent: 'flex-end', marginTop: 10}}>
               <Button variant='contained' color='primary' onClick={this.toggleFrailCare}>Learn More</Button>
             </div>
             
@@ -143,7 +118,7 @@ export default class Services extends Component {
           </CardContent>
         </Card>
 
-        <Card elevation='7' className={`${styles['card']}`}>
+        <Card elevation='4' className={`${styles['card']}`}>
           <div className={`${styles['img']}`}>
             <img alt='Sub-acute Care / Step Down' src={require('../../static/pexels-photo-339620.jpeg')} />
           </div>
@@ -153,8 +128,7 @@ export default class Services extends Component {
             <p>
               Sub-acute care is relatively new and rapidly growing medical service.  It merges the sophisticated technology of a hospital and the efficiency of a skilled nursing facility to reduce the cost of services while maintaining quality of care.
             </p>
-            <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10}}>
-              <Button variant='outlined' color='primary' onClick={this.openModal}>Contact</Button>
+            <div style={{display: 'flex', justifyContent: 'flex-end', marginTop: 10}}>
               <Button variant='contained' color='primary' onClick={this.toggleSubCare}>Learn More</Button>
             </div>
             
@@ -186,7 +160,7 @@ export default class Services extends Component {
           </CardContent>
         </Card>
 
-        <Card elevation='7' className={`${styles['card']}`}>
+        <Card elevation='4' className={`${styles['card']}`}>
           <div className={`${styles['img']}`}>
             <img alt='Assisted Living Apartments' src={require('../../static/old-people-couple-together-connected.jpg')} />
           </div>
@@ -196,8 +170,7 @@ export default class Services extends Component {
             <p>
               These apartments are ideal if you want your freedom but still need some extra care when needed.
             </p>
-            <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10}}>
-              <Button variant='outlined' color='primary' onClick={this.openModal}>Contact</Button>
+            <div style={{display: 'flex', justifyContent: 'flex-end', marginTop: 10}}>
               <Button variant='contained' color='primary' onClick={this.toggleAssistLive}>Learn More</Button>
             </div>
             
@@ -218,8 +191,6 @@ export default class Services extends Component {
             </Collapse>
           </CardContent>
         </Card>
-
-        <ContactModal open={this.state.dialog.isOpen} onClose={this.closeModal} />
       </div>
     );
   }

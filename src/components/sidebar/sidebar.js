@@ -83,7 +83,7 @@ export default class Sidebar extends Component {
               color={this.props.location.pathname === '/contact' ? 'primary' : 'default'}
               onClick={() => this.openPage('/contact')}
             >
-              Contact
+              Contact Us
             </Button>
           </div>
         </div>

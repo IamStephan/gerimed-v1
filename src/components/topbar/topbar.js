@@ -81,7 +81,7 @@ export default class TopBar extends Component {
                 onClick={() => this.openPage('/contact')}
                 style={{margin: 10}}
               >
-                Contact
+                Contact Us
               </Button>
             </div>
           ) : (
