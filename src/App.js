@@ -24,6 +24,11 @@ const Services = Loadable({
   loading: Loader
 })
 
+const About = Loadable({
+  loader: () => import('./pages/about/about'),
+  loading: Loader
+})
+
 const Contact = Loadable({
   loader: () => import('./pages/contact/contact'),
   loading: Loader
@@ -65,6 +70,7 @@ export default class Global extends Component {
               <Topbar />
               <Switch>
                 <Route component={Services} exact path='/services' />
+                <Route component={About} exact path='/about' />
                 <Route component={Contact} exact path='/contact' />
                 <Route component={Construction} />
               </Switch>
