@@ -34,6 +34,16 @@ const Contact = Loadable({
   loading: Loader
 })
 
+const Langebaan = Loadable({
+  loader: () => import('./pages/langebaan/langebaan'),
+  loading: Loader
+})
+
+const Kleinmond = Loadable({
+  loader: () => import('./pages/kleinmond/kleinmond'),
+  loading: Loader
+})
+
 const stores = {
   AppStore
 }
@@ -72,6 +82,8 @@ export default class Global extends Component {
                 <Route component={Services} exact path='/services' />
                 <Route component={About} exact path='/about' />
                 <Route component={Contact} exact path='/contact' />
+                <Route component={Langebaan} exact path='/langebaan' />
+                <Route component={Kleinmond} exact path='/kleinmond' />
                 <Route component={Construction} />
               </Switch>
               <Footer />
