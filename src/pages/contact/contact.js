@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import styles from './contact.module.scss';
 import { Button } from '@material-ui/core';
@@ -6,6 +7,7 @@ import { Button } from '@material-ui/core';
 import ContactModal from '../../components/contactModal/contactModal';
 import Callout from '../../components/callout/callout'
 
+@withRouter
 export default class Contact extends Component {
   constructor(props) {
     super(props)
@@ -18,6 +20,7 @@ export default class Contact extends Component {
 
     this.closeDialog = this.closeDialog.bind(this)
     this.openDialog = this.openDialog.bind(this)
+    this.openPage = this.openPage.bind(this)
   }
 
   closeDialog() {
@@ -36,6 +39,10 @@ export default class Contact extends Component {
         isOpen: true
       }
     })
+  }
+
+  openPage(url) {
+    this.props.history.push(url)
   }
 
   render() {
@@ -64,7 +71,7 @@ export default class Contact extends Component {
               <p>Langebaan Retirement Village, Aftree-Oord, Suffren Street, Langebaan</p>
               <p>P.O. Box 893, Langebaan, 7357</p>
               <br />
-              <Button variant='contained' color='primary'>View</Button>
+              <Button variant='contained' color='primary' onClick={() => this.openPage('/langebaan')}>View</Button>
             </div>
           </div>
 
@@ -82,7 +89,7 @@ export default class Contact extends Component {
               <p>Kogelpark Retirement Village, Botriver Road, Kleinmond</p>
               <p>P.O. Box 585, Kleinmond, 7195</p>
               <br />
-              <Button variant='contained' color='primary'>View</Button>
+              <Button variant='contained' color='primary' onClick={() => this.openPage('/langebaan')}>View</Button>
             </div>
           </div>
         </section>
