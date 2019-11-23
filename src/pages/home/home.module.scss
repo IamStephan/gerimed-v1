@@ -1,0 +1,94 @@
+@import '../../utils/globals.scss';
+
+$breakpointOne: 800;
+
+.home {
+    display: flex;
+    flex-direction: column;
+
+    .hero {
+        display: flex;
+
+        .left {
+            flex: 2;
+            position: relative;
+            min-height: 70vh;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #212121;
+            color: white;
+
+            .top {
+                padding: #{$padding * 2}px;
+
+                .title {
+                    text-align: center;
+                    color: $primary;
+                }
+
+                .content {
+                    font-size: 1.2em;
+                }
+            }
+
+            .bottom {
+                padding: #{$padding}px;
+
+                .title {
+                    color: white;
+                    text-align: center;
+                    padding: #{$padding * 2}px;
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
+
+    .ass {
+        .title {
+            text-align: center;
+            padding: #{$padding}px;
+            padding-bottom: 0;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-auto-rows: 200px;
+            gap: #{$padding * 4}px;
+            padding: #{$padding * 4}px;
+
+            .logo {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: #{$breakpointOne}px){
+    .home {
+        .hero {
+            flex-direction: column;
+        }
+    }
+}

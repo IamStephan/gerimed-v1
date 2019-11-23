@@ -19,6 +19,11 @@ const Construction = Loadable({
   loading: Loader
 })
 
+const Home = Loadable({
+  loader: () => import('./pages/home/home'),
+  loading: Loader
+})
+
 const Services = Loadable({
   loader: () => import('./pages/services/services'),
   loading: Loader
@@ -79,6 +84,7 @@ export default class Global extends Component {
               <ScrollToTop />
               <Topbar />
               <Switch>
+                <Route component={Home} exact path='/' />
                 <Route component={Services} exact path='/services' />
                 <Route component={About} exact path='/about' />
                 <Route component={Contact} exact path='/contact' />

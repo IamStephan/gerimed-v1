@@ -16,13 +16,13 @@ export default class About extends Component {
         <div className={`${styles['owners']}`}>
           <div className={`${styles['owner']}`}>
             <div className={`${styles['photo']}`}>
-              <img src={require('../../static/gerimed2.webp')} />
+              <img alt='Carel & Marisa Pieterse' src={require('../../static/gerimed2.webp')} />
             </div>
             <p>Carel & Marisa Pieterse</p>
           </div>
           <div className={`${styles['owner']}`}>
             <div className={`${styles['photo']}`}>
-              <img src={require('../../static/gerimed1.webp')} />
+              <img alt='Flip & Irene Fouche' src={require('../../static/gerimed1.webp')} />
             </div>
             <p>Flip & Irene Fouche</p>
           </div>
