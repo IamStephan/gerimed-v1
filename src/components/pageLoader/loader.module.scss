@@ -4,6 +4,19 @@ $loaderSize: 50;
 $loaderBorder: 7;
 $animDur: 500;
 
+.error {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        margin: #{$margin * 2}px;
+        font-weight: bold;
+    }
+}
+
 .loader {
     height: 100vh;
     position: relative;
