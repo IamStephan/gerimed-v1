@@ -71,10 +71,6 @@ export default class Global extends Component {
     return (
       <Fragment>
         <Helmet>
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-          />
           <title>Gerimed</title>
         </Helmet>
 

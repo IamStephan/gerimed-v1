@@ -6,11 +6,11 @@ export default class PageTemplate extends Component {
     return (
       <Fragment>
         <Helmet>
+          <meta name="keywords" content={this.props.keywords ? this.props.keywords.join(', ') : ''} />
+          <meta name="description" content={this.props.description} />
           <title>
             {this.props.title}
           </title>
-          <meta name='keywords' content={this.props.keywords.join(', ')} />
-          <meta name='description' content={this.props.description} />
         </Helmet>
 
         <div>
