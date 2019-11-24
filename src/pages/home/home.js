@@ -19,6 +19,7 @@ export default class Home extends Component {
   render() {
     return (
       <Page
+        title='Gerimed'
         description='Gerimed Landing Page'
       >
         <div className={`${styles['home']}`}>
