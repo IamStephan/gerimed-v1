@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
+// import { Button } from '@material-ui/core';
 
 import styles from './about.module.scss';
 
@@ -62,7 +62,7 @@ export default class About extends Component {
           </p>
           <br />
           
-          <h2 className={`${styles['title']}`} >Our Locations</h2>
+          {/* <h2 className={`${styles['title']}`} >Our Locations</h2>
           <section className={`${styles['locations']}`}>
             <div className={`${styles['location']}`}>
               <div className={`${styles['map']}`}>
@@ -99,7 +99,7 @@ export default class About extends Component {
                 <Button variant='contained' color='primary'>View</Button>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </Page>
       

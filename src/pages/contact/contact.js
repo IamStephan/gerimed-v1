@@ -94,7 +94,7 @@ export default class Contact extends Component {
                 <p>Kogelpark Retirement Village, Botriver Road, Kleinmond</p>
                 <p>P.O. Box 585, Kleinmond, 7195</p>
                 <br />
-                <Button variant='contained' color='primary' onClick={() => this.openPage('/langebaan')}>View</Button>
+                <Button variant='contained' color='primary' onClick={() => this.openPage('/kleinmond')}>View</Button>
               </div>
             </div>
           </section>
