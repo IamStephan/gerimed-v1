@@ -16,12 +16,17 @@ export default class Footer extends Component {
     }
 
     this.openPage = this.openPage.bind(this)
+    this.openTab = this.openTab.bind(this)
     this.closeDialog = this.closeDialog.bind(this)
     this.openDialog = this.openDialog.bind(this)
   }
 
   openPage(url) {
     this.props.history.push(url)
+  }
+
+  openTab(url) {
+    window.open(url)
   }
 
   closeDialog() {
@@ -54,7 +59,7 @@ export default class Footer extends Component {
             <p>Tel: 022 772 1273</p>
             <p>Cell: 082 079 4173</p>
             <br />
-            <Button variant='contained' color='primary'>Visit shop</Button>
+            <Button variant='contained' color='primary' onClick={() => this.openTab('https://gerimedmobility.netlify.com')}>Visit shop</Button>
           </section>
           <section className={`${styles['section']}`}>
             <h2>Gerimed Langebaan</h2>
