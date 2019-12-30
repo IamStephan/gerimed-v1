@@ -6,7 +6,7 @@ exports.handler = function(event, context, callback) {
   const msg = {
     to: 'stephan@avvent.io',
     cc: ['armin@avvent.io'],
-    from: 'test@example.com',
+    from: 'contact@gerimed.co.za',
     subject: 'Test: send from node',
     text: 'asdasd',
     html: 'asdasd',
