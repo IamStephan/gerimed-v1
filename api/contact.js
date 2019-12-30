@@ -5,10 +5,11 @@ exports.handler = function(event, context, callback) {
 
   const msg = {
     to: 'stephan@avvent.io',
-    from: 'test@example.com',
-    subject: 'Sending with Twilio SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    cc: ['armin@avvent.io'],
+    from: 'contact@gerimed.co.za',
+    subject: 'Test: send from node',
+    text: 'asdasd',
+    html: 'asdasd',
   };
   sgMail.send(msg);
 
