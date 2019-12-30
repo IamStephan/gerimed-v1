@@ -4,7 +4,7 @@ exports.handler = function(event, context, callback) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
-    to: 'test@example.com',
+    to: 'stephan@avvent.io',
     from: 'test@example.com',
     subject: 'Sending with Twilio SendGrid is Fun',
     text: 'and easy to do anywhere, even with Node.js',
@@ -12,5 +12,5 @@ exports.handler = function(event, context, callback) {
   };
   sgMail.send(msg);
 
-  console.log(process.env.SENDGRID_API_KEY)
+  console.log('sent')
 };
