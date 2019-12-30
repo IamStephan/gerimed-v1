@@ -12,5 +12,5 @@ exports.handler = function(event, context, callback) {
   };
   sgMail.send(msg);
 
-  console.log(msg)
+  console.log(process.env.SENDGRID_API_KEY)
 };
