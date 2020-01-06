@@ -156,6 +156,11 @@ export default class ContactModal extends Component {
       }
 
       this.props.onClose()
+    } else {
+      await this.setStateAsync({
+        ...this.state,
+        formWorking: false
+      })
     }
   }
 
