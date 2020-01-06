@@ -114,10 +114,7 @@ export default class ContactModal extends Component {
     }
 
     //Check if there was any errors
-    await this.setStateAsync({
-      ...this.state,
-      formWorking: false
-    })
+
 
     if(!errors) {
       let PostRequest = {
@@ -136,9 +133,19 @@ export default class ContactModal extends Component {
       
         if (!response.ok) {
           alert('Error: Your form has not been submited')
+          await this.setStateAsync({
+            ...this.state,
+            formWorking: false
+          })
+
           return
         }
 
+        await this.setStateAsync({
+          ...this.state,
+          formWorking: false
+        })
+        
         this.props.onClose()
           
       } catch(e){
