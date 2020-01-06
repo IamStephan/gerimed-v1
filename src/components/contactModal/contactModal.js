@@ -114,8 +114,6 @@ export default class ContactModal extends Component {
     }
 
     //Check if there was any errors
-
-
     if(!errors) {
       let PostRequest = {
         customData: {
@@ -126,7 +124,7 @@ export default class ContactModal extends Component {
       }
 
       try{
-        const response = await fetch('https://gerimed.netlify.com/.netlify/functions/contact', {
+        const response = await fetch('https://gerimed.netlify.com/.netlify/api/contact', {
           method: 'POST',
           body: JSON.stringify(PostRequest),
         })
@@ -136,7 +134,7 @@ export default class ContactModal extends Component {
             ...this.state,
             formWorking: false
           })
-          alert('Error: Your form has not been submited ' + JSON.stringify(response))
+          alert('Error: Your form has not been submited 2' + JSON.stringify(response))
 
           return
         }
@@ -153,8 +151,8 @@ export default class ContactModal extends Component {
           ...this.state,
           formWorking: false
         })
-        
-        alert('Error: Your form has not been submited ' + JSON.stringify(response))
+
+        alert('Error: Your form has not been submited 1' + JSON.stringify(e))
       }
 
       this.props.onClose()
