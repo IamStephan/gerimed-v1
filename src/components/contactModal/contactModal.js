@@ -124,7 +124,7 @@ export default class ContactModal extends Component {
       }
 
       try{
-        const response = await fetch('https://gerimed.netlify.com/.netlify/api/contact', {
+        const response = await fetch('https://gerimed.netlify.com/.netlify/functions/contact', {
           method: 'POST',
           body: JSON.stringify(PostRequest),
         })
