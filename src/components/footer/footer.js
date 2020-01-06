@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Divider, Button, Dialog, DialogContent, DialogTitle, DialogContentText, TextField, DialogActions } from '@material-ui/core';
+import { Divider, Button } from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 import styles from './footer.module.scss';
 
@@ -9,16 +10,8 @@ export default class Footer extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      dialog: {
-        isOpen: false
-      }
-    }
-
     this.openPage = this.openPage.bind(this)
     this.openTab = this.openTab.bind(this)
-    this.closeDialog = this.closeDialog.bind(this)
-    this.openDialog = this.openDialog.bind(this)
   }
 
   openPage(url) {
@@ -29,31 +22,13 @@ export default class Footer extends Component {
     window.open(url)
   }
 
-  closeDialog() {
-    this.setState({
-      ...this.state,
-      dialog: {
-        isOpen: false
-      }
-    })
-  }
-
-  openDialog() {
-    this.setState({
-      ...this.state,
-      dialog: {
-        isOpen: true
-      }
-    })
-  }
-
   render() {
     return (
       <footer className={`${styles['footer']}`}>
         <div className={`${styles['places']}`}>
           <section className={`${styles['section']}`}>
             <h2>Gerimed Mobility</h2>
-            <p>Shop 3, Madriko Centre,</p>
+            <p>844@Oostewal Building, Oostewal Rd</p>
             <p>Langebaan, 7357</p>
             <br />
             <p>Tel: 022 772 1273</p>
@@ -90,34 +65,11 @@ export default class Footer extends Component {
             <Button variant='text' color='inherit'>© Gerimed 2019</Button>
             <Button variant='text' color='inherit'>Sitemap</Button>
           </section>
-          <Button variant='contained' color='primary' onClick={this.openDialog}>Newsletter</Button>
-        </div>
 
-        <Dialog open={this.state.dialog.isOpen} onClose={this.closeDialog}>
-          <DialogTitle>Subscribe to our newsletter</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              To subscribe to this website, please enter your email address here. We will send updates
-              occasionally.
-            </DialogContentText>
-            <TextField
-              autoFocus
-              margin="dense"
-              id="name"
-              label="Email Address"
-              type="email"
-              fullWidth
-            />
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={this.closeDialog} color="primary">
-              Cancel
-            </Button>
-            <Button onClick={this.closeDialog} color="primary" variant='contained'>
-              Subscribe
-            </Button>
-          </DialogActions>
-        </Dialog>
+          <Button variant='contained' color='primary' onClick={() => this.openTab('https://www.facebook.com/pages/Gerimed/190603021070025')}>
+            <FacebookIcon />
+          </Button>
+        </div>
       </footer>
     );
   }

@@ -134,7 +134,7 @@ export default class ContactModal extends Component {
             ...this.state,
             formWorking: false
           })
-          alert('Error: Your form has not been submited 2' + JSON.stringify(response))
+          alert('Error: Your form has not been submited')
 
           return
         }
@@ -152,7 +152,7 @@ export default class ContactModal extends Component {
           formWorking: false
         })
 
-        alert('Error: Your form has not been submited 1' + JSON.stringify(e))
+        alert('Error: Your form has not been submited')
       }
 
       this.props.onClose()

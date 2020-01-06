@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
 
 import styles from './langebaan.module.scss'
 
@@ -34,12 +33,12 @@ export default class Langebaan extends Component {
               <iframe title='Langebaan' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3342.695422260265!2d18.030970965190075!3d-33.09079673087838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34aa1d8f53734d%3A0x18c036f8cb7d2d00!2sGerimed%20Langebaan%20cc!5e0!3m2!1sen!2sza!4v1574001394531!5m2!1sen!2sza" />
               </div>
               <div className={`${styles['content']}`}>
+                <br />
                 <p>Tel: 022 772 1252 / 1296 / 2385</p>
                 <p>Fax: 022 772 2061</p>
                 <p>Langebaan Retirement Village, Aftree-Oord, Suffren Street, Langebaan</p>
                 <p>P.O. Box 893, Langebaan, 7357</p>
                 <br />
-                <Button variant='contained' color='primary'>Contact Langebaan Division</Button>
               </div>
             </div>
           </section>

@@ -12,7 +12,7 @@ exports.handler =  async (event, context, callback) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
     const msg = {
-        to: 'stephan@avvent.io',
+        to: ['info@gerimed.co.za', 'stephan@avvent.io'],
         from: 'contact_form@gerimed.co.za',
         subject: 'Contact Form Submission',
         html: `
