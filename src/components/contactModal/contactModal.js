@@ -132,11 +132,11 @@ export default class ContactModal extends Component {
         })
       
         if (!response.ok) {
-          alert('Error: Your form has not been submited')
           await this.setStateAsync({
             ...this.state,
             formWorking: false
           })
+          alert('Error: Your form has not been submited ' + JSON.stringify(response))
 
           return
         }
@@ -145,7 +145,7 @@ export default class ContactModal extends Component {
           ...this.state,
           formWorking: false
         })
-        
+
         this.props.onClose()
           
       } catch(e){
@@ -153,7 +153,8 @@ export default class ContactModal extends Component {
           ...this.state,
           formWorking: false
         })
-        alert('Error: Your form has not been submited')
+        
+        alert('Error: Your form has not been submited ' + JSON.stringify(response))
       }
 
       this.props.onClose()
