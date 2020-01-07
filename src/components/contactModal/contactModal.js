@@ -134,7 +134,7 @@ export default class ContactModal extends Component {
             ...this.state,
             formWorking: false
           })
-          alert('Error: Your form has not been submited')
+          alert(`Error: Your form has not been submited, ${response.body || 'Server not responding or client error'}`)
 
           return
         }
@@ -152,7 +152,7 @@ export default class ContactModal extends Component {
           formWorking: false
         })
 
-        alert('Error: Your form has not been submited')
+        alert(`Error: Your form has not been submited, ${e.body || 'Server not responding or client error'}`)
       }
 
       this.props.onClose()

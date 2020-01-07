@@ -1,7 +1,7 @@
 const sgMail = require('@sendgrid/mail')
 
 function ID () {
-    return '_' + Math.random().toString(36).substr(2, 9);
+    return Math.random().toString(36).substr(2, 9);
 }
 
 exports.handler =  async (event, context, callback) => {
@@ -25,6 +25,8 @@ exports.handler =  async (event, context, callback) => {
 
     try{
         await sgMail.send(msg)
+
+        console.log('Message sent!')
 
         return {
             statusCode: 200,
