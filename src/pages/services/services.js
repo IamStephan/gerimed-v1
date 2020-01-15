@@ -63,7 +63,7 @@ export default class Services extends Component {
           <h1 className={`${styles['title']}`}>Services Overview</h1>
           <Card elevation='4' className={`${styles['card']}`}>
             <div className={`${styles['img']}`}>
-              <img alt='Frail care' src={require('../../static/pexels-photo-302083.jpeg')} />
+              <img alt='Frail care' src={require('../../static/production/pexels-photo-302083.jpg')} />
             </div>
 
             <CardContent className={`${styles['content']}`}>
@@ -126,7 +126,7 @@ export default class Services extends Component {
 
           <Card elevation='4' className={`${styles['card']}`}>
             <div className={`${styles['img']}`}>
-              <img alt='Sub-acute Care / Step Down' src={require('../../static/pexels-photo-339620.jpeg')} />
+              <img alt='Sub-acute Care / Step Down' src={require('../../static/production/pexels-photo-339620.jpg')} />
             </div>
 
             <CardContent className={`${styles['content']}`}>
@@ -168,7 +168,7 @@ export default class Services extends Component {
 
           <Card elevation='4' className={`${styles['card']}`}>
             <div className={`${styles['img']}`}>
-              <img alt='Assisted Living Apartments' src={require('../../static/old-people-couple-together-connected.jpg')} />
+              <img alt='Assisted Living Apartments' src={require('../../static/production/old-people-couple-together-connected.jpg')} />
             </div>
 
             <CardContent className={`${styles['content']}`}>

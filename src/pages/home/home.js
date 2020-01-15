@@ -25,7 +25,7 @@ export default class Home extends Component {
         <div className={`${styles['home']}`}>
           <div className={`${styles['hero']}`}>
             <div className={`${styles['left']}`}>
-              <img alt='Home' src={require('../../static/pexels-photo-home.webp')} />
+              <img alt='Home' src={require('../../static/production/pexels-photo-home.jpg')} />
             </div>
             <div className={`${styles['right']}`}>
               <div className={`${styles['top']}`}>
