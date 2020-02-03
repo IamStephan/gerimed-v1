@@ -147,7 +147,6 @@ export default class Services extends Component {
                       <li>Medical (i.e. post-heart attack)</li>
                       <li>Chronic patients (i.e. emphysema etc.)</li>
                       <li>Terminal patients (cancer, etc.)</li>
-                      <li>Paediatric (ages between 2 and 12 years)</li>
                     </ul>
                   </li>
                   <li>

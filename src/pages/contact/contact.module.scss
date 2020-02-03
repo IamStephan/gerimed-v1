@@ -50,6 +50,11 @@ $breakpointOne: 750;
                 padding-top: 25px;
                 padding-left: 25px;
                 padding-bottom: 25px;
+
+                .sub-title {
+                    color: lighten($dark, 30%);
+                    font-size: 0.95em;
+                }
             }
         }
     }

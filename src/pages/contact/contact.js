@@ -70,6 +70,7 @@ export default class Contact extends Component {
                 <h2>
                   Langebaan
                 </h2>
+                <div className={styles['sub-title']}>Gerimed Langebaan cc</div>
                 <br />
                 <p>Tel: 022 772 1252 / 1296 / 2385</p>
                 <p>Fax: 022 772 2061</p>
@@ -88,6 +89,7 @@ export default class Contact extends Component {
                 <h2>
                   Kleinmond
                 </h2>
+                <div className={styles['sub-title']}>Gerimed Kleinmond Kogelpark Clinic</div>
                 <br />
                 <p>Tel: 028 271 3994</p>
                 <p>Fax: 028 271 3488</p>

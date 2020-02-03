@@ -35,6 +35,7 @@ export default class Kleinmond extends Component {
               <iframe title='Kleinmond' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.6379134575013!2d19.033504215219118!3d-34.334239550796376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdd998782f7d45%3A0xfc46b306ba2d84ec!2sKogelpark%20Clinic!5e0!3m2!1sen!2sza!4v1574001632011!5m2!1sen!2sza" />
               </div>
               <div className={`${styles['content']}`}>
+                <div className={styles['sub-title']}>Gerimed Kleinmond Kogelpark Clinic</div>
                 <br />
                 <p>Tel: 028 271 3994</p>
                 <p>Fax: 028 271 3488</p>

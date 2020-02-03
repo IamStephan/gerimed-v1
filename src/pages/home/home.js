@@ -56,6 +56,9 @@ export default class Home extends Component {
 
             <div className={`${styles['content']}`}>
               <div className={`${styles['logo']}`}>
+                <img alt='Western Cape Social Development' src={require('../../static/production/wcg.png')} />
+              </div>
+              <div className={`${styles['logo']}`}>
                 <img alt='sa_dep' src={require('../../static/sa_dep.jpg')} />
               </div>
               <div className={`${styles['logo']}`}>
@@ -63,9 +66,6 @@ export default class Home extends Component {
               </div>
               <div className={`${styles['logo']}`}>
                 <img alt='bhf' src={require('../../static/bhf.jpg')} />
-              </div>
-              <div className={`${styles['logo']}`}>
-                <img alt='saaa' src={require('../../static/saaa.png')} />
               </div>
             </div>
           </div>
