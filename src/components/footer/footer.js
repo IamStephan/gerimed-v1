@@ -34,7 +34,7 @@ export default class Footer extends Component {
             <p>Tel: 022 772 1273</p>
             <p>Cell: 082 079 4173</p>
             <br />
-            <Button variant='contained' color='primary' onClick={() => this.openTab('https://gerimedmobility.netlify.com')}>Visit shop</Button>
+            <Button variant='contained' color='primary' onClick={() => this.openTab('https://mobility.gerimed.co.za')}>Visit shop</Button>
           </section>
           <section className={`${styles['section']}`}>
             <h2>Gerimed Langebaan</h2>
