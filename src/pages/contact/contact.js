@@ -55,11 +55,11 @@ export default class Contact extends Component {
         <div className={`${styles['contact']}`}>
           <h1 className={`${styles['title']}`}>Contact Us</h1>
 
-          <Callout style={{marginBottom: 25}}>
+          {/* <Callout style={{marginBottom: 25}}>
             <h2>General enquiries</h2>
             <p style={{marginBottom: 10}}>You can contact us directly by filling in the form and we will respond as soon as possible.</p>
             <Button onClick={this.openDialog} variant='contained' color='primary'>Enquiry Form</Button>
-          </Callout>
+          </Callout> */}
 
           <section className={`${styles['locations']}`}>
             <div className={`${styles['location']}`}>
